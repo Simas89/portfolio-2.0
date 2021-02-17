@@ -1,14 +1,11 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import blueGrey from '@material-ui/core/colors/blueGrey';
 
 const theme = createMuiTheme({
 	palette: {
 		type: 'dark',
 		gradient: {
 			light: '#2E4057',
-			// dark: blueGrey[900],
 			dark: 'black',
-			// dark: '#2E4057',
 		},
 	},
 	gradiendBackground: {

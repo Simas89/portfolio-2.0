@@ -7,7 +7,7 @@ const StyledContainer = styled(Container).attrs({
 	disableGutters: true,
 })`
 	border: 1px solid gray;
-	height: 500px;
+	height: 2500px;
 `;
 
 const Contents = () => {

@@ -10,7 +10,10 @@ const useElemScrollsInit = () => {
 			windowScroll = Math.abs(windowScroll);
 			dispatch(setWindowScroll(windowScroll));
 		};
+
+		update();
 		document.addEventListener('scroll', update);
+
 		return () => window.removeEventListener('scroll', update);
 	}, [dispatch]);
 };
