@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { flexCenter } from 'common/utils';
+import { flexCenter, gradientText } from 'common/utils';
 import { Typography } from '@material-ui/core';
 
 const Div = styled.div`
@@ -14,6 +14,7 @@ const Div = styled.div`
 		background-color: rgba(0, 0, 0, 0.2);
 		width: 100%;
 		.headings {
+			${gradientText('white', 'rgb(170, 170, 185)')}
 			.MuiTypography-h1 {
 				font-family: 'Alegreya Sans SC', sans-serif;
 				font-weight: 100;

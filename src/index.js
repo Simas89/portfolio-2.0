@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom';
 import App from 'components/App';
 import store from 'redux/store';
 import { Provider } from 'react-redux';
@@ -12,16 +13,18 @@ import { ThemeProvider } from 'styled-components';
 
 ReactDOM.render(
 	// <React.StrictMode>
-	<Provider store={store}>
-		<MuiThemeProvider theme={theme}>
-			<StylesProvider injectFirst>
-				<ThemeProvider theme={theme}>
-					<CssBaseline />
-					<App />
-				</ThemeProvider>
-			</StylesProvider>
-		</MuiThemeProvider>
-	</Provider>,
+	<BrowserRouter>
+		<Provider store={store}>
+			<MuiThemeProvider theme={theme}>
+				<StylesProvider injectFirst>
+					<ThemeProvider theme={theme}>
+						<CssBaseline />
+						<App />
+					</ThemeProvider>
+				</StylesProvider>
+			</MuiThemeProvider>
+		</Provider>
+	</BrowserRouter>,
 	// </React.StrictMode>,
 	document.getElementById('root')
 );

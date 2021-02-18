@@ -2,7 +2,7 @@ import React from 'react';
 import Background from 'components/Background';
 import Showcase from 'components/Showcase';
 import Contents from 'components/Contents';
-import NavBar from 'components/NavBar';
+import FooterizZz from 'components/FooterizZz';
 import useElemScrollsInit from 'hooks/useElemScrollsInit';
 
 const App = () => {
@@ -12,9 +12,9 @@ const App = () => {
 	return (
 		<>
 			<Background />
-			<NavBar />
 			<Showcase />
 			<Contents />
+			<FooterizZz />
 		</>
 	);
 };

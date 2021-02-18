@@ -15,3 +15,10 @@ export const flexCenter = (direction = 'row') => {
 		align-items: center;
 	`;
 };
+export const gradientText = (color1 = 'white', color2 = '#2e4057') => {
+	return css`
+		background: -webkit-linear-gradient(${color1}, ${color2});
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	`;
+};
