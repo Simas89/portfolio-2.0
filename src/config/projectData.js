@@ -4,7 +4,7 @@ import { Typography, List, ListItem } from '@material-ui/core';
 
 const Wrapper = styled.div`
 	.MuiListItem-root {
-		/* padding: 0; */
+		padding: 2px ${(p) => p.theme.spacing(2)}px;
 	}
 `;
 
@@ -23,6 +23,21 @@ const demoshopList = [
 	'Showcase screen',
 ];
 
+const chatList = [
+	'Sending and receiving messages instantly with the real-time Firebase Database',
+	'Uploading and displaying image messages',
+	'Notifications to display new messages in other channels',
+	'Sending Direct Messages to other users in our chat',
+	'Tracking when users are online / offline',
+	'Searching messages within created channels',
+	'Custom animations',
+	'Creating, cropping and uploading user avatars',
+	'The ability to favorite / unfavorite channels',
+	'Add emojis to our messages with an Emoji Picker component',
+	'User authentication with Firebase',
+	'Form validation',
+];
+
 export const projectData = {
 	demoshop: {
 		title: 'eCommerce platform',
@@ -31,7 +46,7 @@ export const projectData = {
 		description: () => (
 			<Wrapper>
 				<Typography variant="body2" color="textPrimary">
-					My latest and cleanest project so far. Built with React, Redux,
+					Fully integrated e-commerce platform. Built with React, Redux,
 					Express & MongoDB. Project has the following functionality:{' '}
 				</Typography>
 				<List>
@@ -51,33 +66,21 @@ export const projectData = {
 		url: 'https://react-chat-8590f.firebaseapp.com/',
 		video: 'video/chat.mp4',
 		description: () => (
-			<>
-				<Typography variant="body1" style={{ whiteSpace: 'pre-line' }}>
+			<Wrapper>
+				<Typography variant="body2" color="textPrimary">
 					Real-time chat app built with React, Firebase, Redux and
 					Material-UI. Project has the following functionality:
-					<ul>
-						<li>
-							Sending and receiving messages instantly with the real-time
-							Firebase Database
-						</li>
-						<li>Uploading and displaying image messages</li>
-						<li>
-							Notifications to display new messages in other channels
-						</li>
-						<li>Sending Direct Messages to other users in our chat</li>
-						<li>Tracking when users are online / offline</li>
-						<li>Searching messages within created channels</li>
-						<li>Custom animations</li>
-						<li>Creating, cropping and uploading user avatars</li>
-						<li>The ability to favorite / unfavorite channels</li>
-						<li>
-							Add emojis to our messages with an Emoji Picker component
-						</li>
-						<li>User authentication with Firebase</li>
-						<li>Form validation</li>
-					</ul>
 				</Typography>
-			</>
+				<List>
+					{chatList.map((el) => (
+						<ListItem dense key={el}>
+							<Typography variant="body2" color="textPrimary">
+								{el}
+							</Typography>
+						</ListItem>
+					))}
+				</List>
+			</Wrapper>
 		),
 	},
 	crosseris: {
@@ -85,13 +88,8 @@ export const projectData = {
 		url: 'https://crosseris-serverless.netlify.app/',
 		video: 'video/Crosseris.mp4',
 		description: () => (
-			<>
-				<Typography
-					// paragraph
-					color="primary"
-					variant="body1"
-					style={{ whiteSpace: 'pre-line' }}
-				>
+			<Wrapper>
+				<Typography variant="body2" color="textPrimary">
 					Japanese puzzle game with a built-in level editor. It requires
 					some deeply nested and complex state management. Using Redux with
 					Immer here really reduces that complexity. Also, MongoDB Realm is
@@ -104,7 +102,7 @@ export const projectData = {
 					unbroken lines of filled-in squares there are in any given row or
 					column.
 				</Typography>
-			</>
+			</Wrapper>
 		),
 	},
 	cryptron: {
@@ -112,17 +110,12 @@ export const projectData = {
 		url: 'https://cryptron.netlify.app/',
 		video: 'video/Cryptron.mp4',
 		description: () => (
-			<>
-				<Typography
-					// paragraph
-					color="primary"
-					variant="body1"
-					style={{ whiteSpace: 'pre-line' }}
-				>
+			<Wrapper>
+				<Typography variant="body2" color="textPrimary">
 					A crypto currency dashboard app using Redux toolkit, HighCharts
 					and Cryptocompare API.
 				</Typography>
-			</>
+			</Wrapper>
 		),
 	},
 	social: {
@@ -130,31 +123,13 @@ export const projectData = {
 		url: 'https://intercomas.herokuapp.com/',
 		video: 'video/Social.mp4',
 		description: () => (
-			<>
-				<Typography
-					// paragraph
-					color="primary"
-					variant="body1"
-					style={{ whiteSpace: 'pre-line' }}
-				>
+			<Wrapper>
+				<Typography variant="body2" color="textPrimary">
 					My first project. A small social media platform. Primarily based
-					on posts, comments, and likes. Create posts, follow other users,
-					get their feed by latest or most relevant posts - simple. State
-					is managed using useContext and useReducer hooks. The app
-					utilizes CRUD operations to MongoDB. Server routing is done using
-					both GraphQL and REST API. App features real-time chat built with
-					subscriptions and web sockets. Multiple chat windows are
-					interactable at once. Receive notifications for chat messages and
-					other events. Notifications can be marked as read or deleted. JWT
-					is used for user authorization, protected routes, email
-					confirmation to get an "upgraded account" badge. There is also
-					users search, users stats, option to show online status, emoji
-					support. Upload, scale, and position profile image. Image will
-					then be converted to three different sizes to minimize
-					unnecessary download size. Own posts and comments can be deleted
-					and edited (time of edit will be recorded and displayed).
+					on posts, comments, and likes. Uses both REST and GraphQL. App
+					features real-time chat built with subscriptions and web sockets.
 				</Typography>
-			</>
+			</Wrapper>
 		),
 	},
 };

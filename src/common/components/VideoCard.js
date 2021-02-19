@@ -7,7 +7,7 @@ import { projectData } from 'config';
 import { StyledLink, TooltipCustom } from 'common/components';
 
 const Wrapper = styled.div`
-	border: 1px solid rgba(0, 0, 0, 0.3);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	overflow: hidden;
 
@@ -26,6 +26,16 @@ const Wrapper = styled.div`
 		.MuiTypography-root {
 			font-family: 'Alegreya Sans SC', sans-serif;
 			font-weight: 100;
+		}
+		.MuiIconButton-root {
+			.MuiSvgIcon-root {
+				opacity: 0.7;
+				transition: 0.2s;
+			}
+			&:hover .MuiSvgIcon-root {
+				opacity: 1;
+				transition: 0.2s;
+			}
 		}
 	}
 `;

@@ -37,6 +37,9 @@ export const TooltipCustom = ({
 	const handleClick = () => {
 		setIsOpen(!isOpen);
 	};
+	const handleClickAway = () => {
+		setIsOpen(false);
+	};
 
 	return (
 		<StyledTooltip
@@ -46,7 +49,7 @@ export const TooltipCustom = ({
 			arrow={arrow}
 			open={isOpen}
 			title={
-				<ClickAwayListener onClickAway={handleClick}>
+				<ClickAwayListener onClickAway={handleClickAway}>
 					<Contents>{items}</Contents>
 				</ClickAwayListener>
 			}
