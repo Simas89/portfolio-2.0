@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { flexCenter, gradientText } from 'common/utils';
 import { Typography } from '@material-ui/core';
+import Arrow from 'components/Arrow';
 
 const Div = styled.div`
 	width: 100%;
@@ -38,6 +39,12 @@ const Div = styled.div`
 			/* border-radius: 50%; */
 		}
 	}
+	.arrow-spot {
+		position: absolute;
+		bottom: 0;
+		width: 100px;
+		height: 100px;
+	}
 `;
 
 const Showcase = () => {
@@ -50,6 +57,9 @@ const Showcase = () => {
 				</div>
 
 				<div className="me" />
+			</div>
+			<div className="arrow-spot">
+				<Arrow />
 			</div>
 		</Div>
 	);

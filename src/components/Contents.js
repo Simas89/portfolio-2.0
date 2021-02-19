@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid, Box } from '@material-ui/core';
 import { Header, VideoCard } from 'common/components';
+import ElemScrolls from 'components/ElemScrolls';
 
 const StyledContainer = styled(Container).attrs({
 	maxWidth: 'lg',
@@ -15,30 +16,42 @@ const StyledContainer = styled(Container).attrs({
 const Contents = () => {
 	return (
 		<StyledContainer>
+			<div id="target-anchor" />
 			<Header title="Key Projects" important />
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
-					<VideoCard projectName="demoshop" />
+					<ElemScrolls>
+						<VideoCard projectName="demoshop" />
+					</ElemScrolls>
 				</Grid>
 				<Grid item xs={6}>
-					<VideoCard projectName="chat" />
+					<ElemScrolls>
+						<VideoCard projectName="chat" />
+					</ElemScrolls>
 				</Grid>
 				<Grid item xs={6}>
-					<VideoCard projectName="crosseris" />
+					<ElemScrolls>
+						<VideoCard projectName="crosseris" />
+					</ElemScrolls>
 				</Grid>
 			</Grid>
 			<Header title="Secondary" />
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
-					<VideoCard projectName="cryptron" />
+					<ElemScrolls>
+						<VideoCard projectName="cryptron" />
+					</ElemScrolls>
 				</Grid>
 				<Grid item xs={6}>
-					<VideoCard projectName="social" />
+					<ElemScrolls>
+						<VideoCard projectName="social" />
+					</ElemScrolls>
 				</Grid>
 			</Grid>
 			<Header title="About Me" important />
 
 			<Header title="Always coding B)" />
+			<Box height={50} />
 		</StyledContainer>
 	);
 };

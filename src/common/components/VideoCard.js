@@ -61,8 +61,11 @@ export const VideoCard = ({ projectName }) => {
 						{projectData[projectName].title}
 					</Typography>
 				</StyledLink>
-				<TooltipCustom items={projectData[projectName].description()}>
-					<IconButton disableRipple>
+				<TooltipCustom
+					interactive
+					items={projectData[projectName].description()}
+				>
+					<IconButton>
 						<InfoOutlinedIcon />
 					</IconButton>
 				</TooltipCustom>

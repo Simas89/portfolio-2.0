@@ -1,6 +1,6 @@
 export const variantShiftAndFadeIn = {
 	initial: {
-		y: 60,
+		y: 180,
 		opacity: 0,
 	},
 	animate: {
@@ -9,8 +9,7 @@ export const variantShiftAndFadeIn = {
 		transition: {
 			type: 'tween',
 			ease: 'easeOut',
-			duration: 0.8,
-			delay: 0.1,
+			duration: 1.2,
 		},
 	},
 };

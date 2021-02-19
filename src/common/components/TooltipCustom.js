@@ -24,6 +24,9 @@ const StyledTooltip = styled((props) => (
 const Contents = styled.div`
 	display: flex;
 	flex-direction: column;
+	.MuiTypography-root {
+		color: ${(p) => p.theme.palette.text.middle};
+	}
 `;
 
 export const TooltipCustom = ({
@@ -31,6 +34,7 @@ export const TooltipCustom = ({
 	items,
 	arrow,
 	placement = 'bottom',
+	interactive,
 }) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
@@ -45,7 +49,7 @@ export const TooltipCustom = ({
 		<StyledTooltip
 			onClick={handleClick}
 			placement={placement}
-			interactive={true}
+			interactive={interactive}
 			arrow={arrow}
 			open={isOpen}
 			title={

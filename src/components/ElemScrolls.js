@@ -13,7 +13,7 @@ const ElemScrolls = ({
 	animate = 'animate',
 	triggerDistance = 0,
 	reset = true,
-	resetDistance = 300,
+	resetDistance = 150,
 	className,
 }) => {
 	const [animationTrigger, setAnimationTrigger] = React.useState(false);
