@@ -10,10 +10,15 @@ const Div = styled.div`
 	${flexCenter()}
 	.kicker {
 		position: relative;
-		${flexCenter()}
-		gap: ${(p) => p.theme.spacing(8)}px;
-		background-color: rgba(0, 0, 0, 0.2);
 		width: 100%;
+		background-color: rgba(0, 0, 0, 0.2);
+		gap: ${(p) => p.theme.spacing(8)}px;
+		padding: 0 ${(p) => p.theme.spacing(1)}px;
+		${flexCenter()}
+		${(p) => p.theme.breakpoints.down('xs')} {
+			flex-direction: column;
+		}
+
 		.headings {
 			${gradientText('white', 'rgb(170, 170, 185)')}
 			.MuiTypography-h1 {

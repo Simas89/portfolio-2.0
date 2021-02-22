@@ -44,6 +44,12 @@ const Footer = styled.footer`
 			width: 100%;
 			display: inline-block;
 		}
+		.alegreya {
+			font-family: 'Alegreya Sans SC', sans-serif;
+			font-weight: 300;
+			letter-spacing: 0.08rem;
+			white-space: pre-wrap;
+		}
 	}
 `;
 
@@ -117,7 +123,12 @@ const FooterizZz = () => {
 						</IconButton>
 					</StyledLink>
 				</Box>
-				<Typography align="center" variant="body1" color="textSecondary">
+				<Typography
+					className="alegreya"
+					align="center"
+					variant="h6"
+					color="textSecondary"
+				>
 					simaszurauskas.dev 2021
 				</Typography>
 			</Container>

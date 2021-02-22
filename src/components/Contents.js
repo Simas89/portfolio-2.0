@@ -17,19 +17,19 @@ const Contents = () => {
 	return (
 		<StyledContainer>
 			<div id="target-anchor" />
-			<Header title="Key Projects" important />
+			<Header title="Key Projects" important topHeader />
 			<Grid container spacing={2}>
-				<Grid item xs={6}>
+				<Grid item xs={12} md={6}>
 					<ElemScrolls>
 						<VideoCard projectName="demoshop" />
 					</ElemScrolls>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={12} md={6}>
 					<ElemScrolls>
 						<VideoCard projectName="chat" />
 					</ElemScrolls>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={12} md={6}>
 					<ElemScrolls>
 						<VideoCard projectName="crosseris" />
 					</ElemScrolls>
@@ -37,12 +37,12 @@ const Contents = () => {
 			</Grid>
 			<Header title="Secondary" />
 			<Grid container spacing={2}>
-				<Grid item xs={6}>
+				<Grid item xs={12} md={6}>
 					<ElemScrolls>
 						<VideoCard projectName="cryptron" />
 					</ElemScrolls>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={12} md={6}>
 					<ElemScrolls>
 						<VideoCard projectName="social" />
 					</ElemScrolls>

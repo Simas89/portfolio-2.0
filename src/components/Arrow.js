@@ -15,6 +15,7 @@ const Div = styled.div`
 			}
 		`}
 
+	-webkit-tap-highlight-color: transparent;
 
 	.arrows {
 		width: 60px;

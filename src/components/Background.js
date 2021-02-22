@@ -15,13 +15,9 @@ const Div = styled.div`
 `;
 
 const Background = () => {
-	return (
-		<>
-			<Div>
-				<ParticlesMod />
-			</Div>
-		</>
-	);
+	const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	console.log(isMobile);
+	return <Div>{!isMobile && <ParticlesMod />}</Div>;
 };
 
 export default Background;
